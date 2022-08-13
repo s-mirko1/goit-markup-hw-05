@@ -42,6 +42,7 @@ html {
     --footer-text-color: rgba(255, 255, 255, 0.6);
     --black-color: #000000;
     --fill-color-icons: #AFB1B8;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .container {
@@ -91,6 +92,7 @@ img {
 }
 
 
+
 /* Navigation */
 
 .site-nav {
@@ -131,22 +133,22 @@ img {
     position: relative;
 }
 
-.site-nav-link::after {
-    content: "";
-    display: block;
-    width: 78px;
-    height: 4px;
-    border-radius: 2px;
-    border-color: var(--accent-color);
-    margin-top: 28px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: none;
+.site-nav-link.current::after {
+   position: absolute;
+   content: "";
+   display: block;
+   width: 100%;
+   height: 4px;
+   background-color: var(--accent-color);
+   border-radius: 2px;
+   left: 0;
+   bottom: -1px;
+   opacity: 0;
+   transition: 250ms var(--timing-function);
 }
 
 .site-nav-link:hover::after {
-    display: block;
+    opacity: 1;
 }
 
 .auth-nav-list {
@@ -169,32 +171,19 @@ img {
     
 }
 
-.auth-nav-link::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-color: var(--accent-color);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: none;
-}
-
-.auth-nav-link:hover::after {
-    display: block;
-}
 
 .site-nav-link:hover,
 .site-nav-link:focus {
     color: var(--accent-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 .auth-nav-link:hover,
 .auth-nav-link:focus {
     fill: var(--accent-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 .site-nav .site-nav-link.current {
@@ -216,6 +205,7 @@ header .container {
 .auth-nav-link:focus {
     color: var(--accent-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 .auth-icon {
@@ -494,12 +484,14 @@ header .container {
 .team-soc-link:focus {
     background-color: var(--accent-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 .team-soc-link:hover .team-soc-icon,
 .team-soc-link:focus .team-soc-icon {
     fill: var(--white-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 .team-soc-icon {
@@ -549,12 +541,14 @@ header .container {
 .clients-logo-link:focus {
     border-color: var(--accent-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 .clients-logo-link:hover .clients-logo-icon,
 .clients-logo-link:focus .clients-logo-icon {
     fill: var(--accent-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 /* Footer */
@@ -610,6 +604,7 @@ header .container {
 .adress-item-link:focus {
     color: var(--accent-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 .footer-container {
@@ -658,12 +653,14 @@ header .container {
 .contacts-soc-link:focus {
     background-color: var(--accent-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 .contacts-soc-link:hover .contacts-soc-icon,
 .contacts-soc-link:focus .contacts-soc-icon {
     fill: var(--white-color);
     outline: 0;
+    transition: 250ms var(--timing-function);
 }
 
 
@@ -706,6 +703,7 @@ header .container {
     background-color: var(--accent-color);
     outline: 0;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: 250ms var(--timing-function);
 }
 
 .portfolio-list {
@@ -723,6 +721,7 @@ header .container {
 
 .portfolio-item:hover .portfolio-top-text {
     transform: translateY(0);
+    transition: 250ms var(--timing-function);
 }
 
 .portfolio-top-wrap {
@@ -754,6 +753,7 @@ header .container {
 .portfolio-item:hover,
 .portfolio-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: 250ms var(--timing-function);
 }
 
 .portfolio-item-title {
