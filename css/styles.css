@@ -121,16 +121,20 @@ img {
     padding-left: 0;
 }
 
+.site-nav-item {
+    margin-left: 50px;
+}
+
 .site-nav-link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
-    margin-left: 50px;
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
+    transition: 250ms var(--timing-function);
 }
 
 .site-nav-link.current::after {
@@ -144,7 +148,7 @@ img {
    left: 0;
    bottom: -1px;
    opacity: 0;
-   transition: 250ms var(--timing-function);
+   
 }
 
 .site-nav-link:hover::after,
@@ -170,7 +174,7 @@ img {
     margin-left: 50px;
     padding-top: 32px;
     padding-bottom: 32px;
-    
+    transition: 250ms var(--timing-function);
 }
 
 
@@ -178,14 +182,13 @@ img {
 .site-nav-link:focus {
     color: var(--accent-color);
     outline: 0;
-    transition: 250ms var(--timing-function);
+    
 }
 
 .auth-nav-link:hover,
 .auth-nav-link:focus {
     fill: var(--accent-color);
     outline: 0;
-    transition: 250ms var(--timing-function);
 }
 
 .site-nav .site-nav-link.current {
@@ -204,7 +207,7 @@ img {
     left: 0;
     bottom: -1px;
     opacity: 1;
-        
+       
 }
 
 .auth-icon {
@@ -491,24 +494,22 @@ header .container {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    /* background-color: var(--accent-color); */
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 250ms var(--timing-function);
 }
 
 .team-soc-link:hover,
 .team-soc-link:focus {
     background-color: var(--accent-color);
     outline: 0;
-    transition: 250ms var(--timing-function);
 }
 
 .team-soc-link:hover .team-soc-icon,
 .team-soc-link:focus .team-soc-icon {
     fill: var(--white-color);
     outline: 0;
-    transition: 250ms var(--timing-function);
 }
 
 .team-soc-icon {
@@ -544,28 +545,27 @@ header .container {
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 5px;
-    /* background-color: var(--accent-color); */
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 250ms var(--timing-function);
 }
 
 .clients-logo-icon {
     fill: var(--fill-color-icons);
+    transition: 250ms var(--timing-function);
 }
 
 .clients-logo-link:hover,
 .clients-logo-link:focus {
     border-color: var(--accent-color);
-    outline: 0;
-    transition: 250ms var(--timing-function);
+    outline: 0; 
 }
 
 .clients-logo-link:hover .clients-logo-icon,
 .clients-logo-link:focus .clients-logo-icon {
     fill: var(--accent-color);
     outline: 0;
-    transition: 250ms var(--timing-function);
 }
 
 /* Footer */
@@ -615,13 +615,13 @@ header .container {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--footer-text-color);
+    transition: 250ms var(--timing-function);
 }
 
 .adress-item-link:hover,
 .adress-item-link:focus {
     color: var(--accent-color);
     outline: 0;
-    transition: 250ms var(--timing-function);
 }
 
 .footer-container {
@@ -660,6 +660,7 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 250ms var(--timing-function);
 }
 
 .contacts-soc-icon {
@@ -670,14 +671,12 @@ header .container {
 .contacts-soc-link:focus {
     background-color: var(--accent-color);
     outline: 0;
-    transition: 250ms var(--timing-function);
 }
 
 .contacts-soc-link:hover .contacts-soc-icon,
 .contacts-soc-link:focus .contacts-soc-icon {
     fill: var(--white-color);
     outline: 0;
-    transition: 250ms var(--timing-function);
 }
 
 
@@ -710,7 +709,7 @@ header .container {
     padding: 6px 22px;
     border-radius: 4px;
     border: transparent;
-    
+    transition: 250ms var(--timing-function);
 }
 
 
@@ -720,7 +719,6 @@ header .container {
     background-color: var(--accent-color);
     outline: 0;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: 250ms var(--timing-function);
 }
 
 .portfolio-list {
@@ -734,11 +732,11 @@ header .container {
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
     margin-bottom: 30px;
+    transition: 250ms var(--timing-function);
 }
 
 .portfolio-item:hover .portfolio-top-text {
     transform: translateY(0);
-    transition: 250ms var(--timing-function);
 }
 
 .portfolio-top-wrap {
@@ -770,7 +768,6 @@ header .container {
 .portfolio-item:hover,
 .portfolio-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: 250ms var(--timing-function);
 }
 
 .portfolio-item-title {
